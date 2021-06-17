@@ -1,4 +1,4 @@
-###### 1. Multiple '&&' checks:
+##### 1. Multiple '&&' checks:
 
 ```javascript
 // long hand
@@ -14,7 +14,7 @@ if (['a', 'b', 'c', 'd'].every((x) => x in data)) {
 }
 ```
 
-###### 2. multiple '||' checks:
+##### 2. multiple '||' checks:
 
 ```javascript
 //longhand
@@ -28,7 +28,7 @@ if (['test', 'net', 'tom'].includes(a)) {
 }
 ```
 
-###### 3. Multiple '||' checks for different properties
+##### 3. Multiple '||' checks for different properties
 
 ```javascript
 //longhand
@@ -56,4 +56,26 @@ a.forEach((data)=> names += `${data.names.join(', ')}, `)
 console.log(names)
 
 // result: 'Ravi', 'Sai','Kiran','Suma', 'Sandy','Shreya', ==> remove ending comma by substr method
+```
+#### 5. Null, Empty, Undefined Checks:
+
+```javascript
+// Longhand version
+if(productName !== undefined || productName !== "" || productName !== null){
+    console.log(productName)
+}
+  
+// Shorthand version
+if(productName){
+    console.log(productName)
+}
+```
+
+#### 6. Implicit Return:
+
+```javascript
+const getProductPrice = (price,quantity) => quantity * price;
+const result = getProductPrice(12,5)
+// result : 60
+
 ```
