@@ -79,3 +79,53 @@ const result = getProductPrice(12,5)
 // result : 60
 
 ```
+
+#### 7. Multiple If/switch cases:
+
+```javascript
+//longhand
+
+if(a ==='a'){
+  //doA()
+}
+else if(a==='b'){
+  //doB()
+}else if(a==='c'){
+  //doC();
+}
+
+const a = 'a';
+switch (a) {
+  case 'a':
+    //doA();
+  case 'b':
+    //doB()
+  case 'c':
+    //doC()
+
+  // shorthand
+
+  const cases = {
+    a: doA
+    b:doB
+    c:doC
+  }
+  const doA = (val1,val2)=> { 
+    // doA code
+  }
+  return cases[a](val1,val2); // you can also pass args like this
+```
+
+#### 8. Optional Chaining:
+
+```javascript
+//longhand
+if(person&& person.address&& person.address.city){
+  // console.log(person.address.city)
+}
+
+// shorthand
+(person?.address?.city){
+  //console.log(person.address.city) // null errors will be handled perfectly here
+}
+```
