@@ -129,3 +129,73 @@ if(person&& person.address&& person.address.city){
   //console.log(person.address.city) // null errors will be handled perfectly here
 }
 ```
+#### 9. declaring multiple variables once:
+
+```javascript
+
+// longhand
+let a = 10;
+let b= 10;
+let c = 10;
+
+//shorthand
+let a, b, c = 10;
+let [a, b, c] = [10, 20, 30 ]; // assigning different values
+```
+
+#### 10. Spread Utilities:
+
+```javascript
+
+// Merging arrays, objects
+const one = [1, 2, 3];
+const two = [4, 5, 6];
+objectA = { a:22, b:34};
+const objectB = {c:28, d:30};
+
+// Longhand
+const newArray = one.concat(two);
+const newObject = Object.assign(objectA, objectB);
+// Shorthand
+const newArray = [...one, ...two];
+const newObject = {...objectA, ...objectB}
+
+// destructuring
+const {a, ...restObject} = newObject
+// expected output: a:22, {b:34, c:28, d:30}
+```
+#### 11. Object property assignment: 
+
+```javascript
+
+const name = "John",
+  city = "NY",
+  age = 25;
+
+// Longhand
+const person = { name: name, city: city, age: age };
+
+// Shorthand
+const person = { name, city, age };
+```
+
+#### 12. Mandatory Parameters:
+
+```javascript
+function Greet(message) {
+  if (message === undefined) {
+    throw new Error("Missing parameter!");
+  }
+  // do some operations here
+  return message;
+}
+
+mandatory = () => {
+  throw new Error("Missing parameter!");
+};
+
+Greet = (message = mandatory()) => {
+  // do some operations here
+  return message;
+};
+```
