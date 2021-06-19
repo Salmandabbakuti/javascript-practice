@@ -14,7 +14,7 @@ if (['a', 'b', 'c', 'd'].every((x) => x in data)) {
 }
 ```
 
-##### 2. multiple '||' checks:
+##### 2. Multiple '||' checks:
 
 ```javascript
 //longhand
@@ -202,5 +202,5 @@ Greet = (message = mandatory()) => {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjI1OTIyMjddfQ==
+eyJoaXN0b3J5IjpbODUwMTA0MjldfQ==
 -->
