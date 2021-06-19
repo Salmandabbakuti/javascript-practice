@@ -200,7 +200,6 @@ Greet = (message = mandatory()) => {
 };
 ```
 
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUwMTA0MjldfQ==
+eyJoaXN0b3J5IjpbMjQ0MTYxNSw4NTAxMDQyOV19
 -->
