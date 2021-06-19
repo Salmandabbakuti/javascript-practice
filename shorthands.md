@@ -200,8 +200,7 @@ Greet = (message = mandatory()) => {
 };
 ```
 
-    enter code here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjAzNTg3NDJdfQ==
+eyJoaXN0b3J5IjpbLTEzMjI1OTIyMjddfQ==
 -->
