@@ -48,3 +48,11 @@ doSomething();
 const t1 = performance.now();
 console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
 ```
+#### 4. Emptying Array: 
+
+```javascript
+const arr = ['a','b','c','d','e','f'];
+arr.length = 0;
+console.log(arr)
+// expected output: Array []
+```
