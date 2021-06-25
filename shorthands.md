@@ -199,7 +199,3 @@ Greet = (message = mandatory()) => {
   return message;
 };
 ```
-hjh
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzAwMzc1MDUsODUwMTA0MjldfQ==
--->
