@@ -69,4 +69,41 @@ const arr = [
 const test = arr.reduce((acc,curr) => acc + (curr.quantity * curr.price),0);
 console.log(test);
 // expected output: 600
+
+const array1 = ['a', 'b', 'c'];
+// *for of  for object/array properties* only for iterables array/object
+for (const element of array1) {
+  console.log(element);
+}
+
+// expected output: "a"
+// expected output: "b"
+// expected output: "c"
+// *for in  for object/array keys* --> index non iterable aswell. works for like single object
+for (const element in array1) {
+  console.log(element);
+}
+
+// expected output: "0"
+// expected output: "1"
+// expected output: "2"
+
+const object = [{ a: 1, b: 2, c: 3 },{ a: 4, b: 5, c: 6 }];
+
+for (const record of records) {
+  console.log(record)
+}
+
+// expected output:
+// Object { a: 1, b: 2, c: 3 }
+// Object { a: 4, b: 5, c: 6 }
+
+const object = [{ a: 1, b: 2, c: 3 },{ a: 4, b: 5, c: 6 }];
+
+for (const record in records) {
+  console.log(record)
+}
+// expected output:
+// "0"
+// "1"
 ```
