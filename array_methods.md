@@ -100,10 +100,32 @@ for (const record of records) {
 
 const object = [{ a: 1, b: 2, c: 3 },{ a: 4, b: 5, c: 6 }];
 
-for (const record in records) {
+for (const [i, record] in records.entries()) {
   console.log(record)
 }
 // expected output:
 // "0"
 // "1"
+
+const records = [
+  {
+    a: 'somestring',
+    b: 42
+  }, {
+    a: 'somestring',
+    b: 43
+  },
+  {
+    a: 'somestring',
+    b: 44
+  }
+];
+
+for (const [key, value] of Object.entries(records)) {
+  console.log(`${key}: ${value.b}`);
+}
+// expected output
+// "0: 42"
+// "1: 43"
+// "2: 44"
 ```
