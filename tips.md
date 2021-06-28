@@ -56,3 +56,22 @@ arr.length = 0;
 console.log(arr)
 // expected output: Array []
 ```
+
+#### 5. Customizing Field Names dynamically (Lookup model):
+
+```javascript
+const fieldNames = {
+  firstname:'First Name',
+  ssnorsin: 'SSN/SIN'
+}
+const selectedFields = ['firstname', 'lastname', 'ssnorsin']
+console.log('initial selected fields-->', selectedFields);
+selectedFields.forEach((f,i)=> {
+  selectedFields[i] = fieldNames[f]? fieldNames[f]: f ;
+})
+console.log('final selected fields-->', selectedFields);
+
+// expected output:
+// initial selected fields--> Array ["firstname", "lastname", "ssnorsin"]
+// final selected fields--> Array ["First Name", "lastname", "SSN/SIN"]
+```
