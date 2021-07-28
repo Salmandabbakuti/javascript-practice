@@ -199,3 +199,17 @@ Greet = (message = mandatory()) => {
   return message;
 };
 ```
+
+#### 13. Nullish Coalescing(??)
+
+```javascript
+let a
+let b = a ?? "Nothing found"
+console.log(b)
+// expected output: "Nothing found"
+
+let a = 12
+let b = a ?? "Nothing found"
+console.log(b)
+// expected output: 12
+```
