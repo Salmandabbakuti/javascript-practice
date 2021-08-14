@@ -213,3 +213,27 @@ let b = a ?? "Nothing found"
 console.log(b)
 // expected output: 12
 ```
+#### 14. Short-circuit assignment:
+
+```javascript
+
+// long hand
+const foo = 'Hey There!';
+let text;
+if(foo){
+  text = foo;
+} else {
+  text = '';
+}
+
+// longhand: ternary
+const foo = 'Hey There!';
+const text = foo ? foo : '';
+
+// shorthand: short-circuit
+const foo = 'Hey There!';
+const text = foo || 'Hi';
+// returns first truthy value and assign it to the variable; In js any value other than false, 0, '', "", null, undefined and NaN is considered as truthy value
+//  if you wanted to assign 0 to variable, it may not work since 0 is falsy value in js
+console.log(text); 
+// expected output: "Hey There!"
