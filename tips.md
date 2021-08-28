@@ -75,3 +75,29 @@ console.log('final selected fields-->', selectedFields);
 // initial selected fields--> Array ["firstname", "lastname", "ssnorsin"]
 // final selected fields--> Array ["First Name", "lastname", "SSN/SIN"]
 ```
+
+#### 6. Filter out false values from array:
+
+```javascript
+const data = [1, 0, false, "", 2, NaN, 0n, null, 3, undefined, 4]
+const filteredData = data.filter(Boolean)
+console.log(filteredData) 
+//expected output: [1, 2, 3, 4]
+```
+
+#### 7. Flattening the array:
+
+```javascript
+const array = [123, 500, [1, 2, [34, 56, 67, [234, 1245], 900]], 845, [30257]]
+console.log(array.flat(Infinity)) // flatten array of array with infinity
+//expected output: [123, 500, 1, 2, 34, 56, 67, 234, 1245, 900, 845, 30257]
+```
+
+#### 8. Remove duplicate values from Array:
+
+```javascript
+const data = [0, 1, 2, 1, 3, 2, 4, 3, 5, 4, 6, 6, 7, 7, 8, 8, 9, 0, 'Ann', 'Ann', 'Lori', 'Lori', false, false, undefined, undefined, null, null];
+const unique = [...new Set(data)];
+console.log(unique);
+// expected output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "Ann", "Lori", false, undefined, null]
+```
