@@ -237,3 +237,17 @@ const text = foo || 'Hi';
 //  if you wanted to assign 0 to variable, it may not work since 0 is falsy value in js
 console.log(text); 
 // expected output: "Hey There!"
+```
+#### 15. The '&&' operator for Condition:
+
+```javascript
+const isExists = true;
+const doSomethingAwesome = () => console.log('hey there.!');
+
+//The long way 
+if (isExists) {
+  doSomethingAwesome();
+}
+//The short way
+isExists && doSomethingAwesome();
+```
