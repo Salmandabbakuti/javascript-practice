@@ -219,7 +219,7 @@ let b = a ?? "Nothing found"
 console.log(b)
 // expected output: ''
 ```
-#### 14. Short-circuit assignment:
+#### 14. Short-circuit assignment '||':
 
 ```javascript
 
@@ -256,4 +256,14 @@ if (isExists) {
 }
 //The short way
 isExists && doSomethingAwesome();
+
+// shorthand for condition without else
+const a = 'ADMTIN'
+a === 'ADMIN' && console.log('Im Admin')
+// expected output: 'Im Admin'
+
+// shorthand for assignment
+const foo = 'Hey There!';
+const text = foo && 'Hi'; // if foo is truthy value, it will assign righthand value to 'text' variable. (see the difference b/w '??', '||', '&&')
+console.log(text)
 ```
