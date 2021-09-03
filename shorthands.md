@@ -201,6 +201,7 @@ Greet = (message = mandatory()) => {
 ```
 
 #### 13. Nullish Coalescing(??)
+>only assigns if lefthand value is nullish (null or undefined). won't work for 0, '', false, NaN. use shortcircuit assignment
 
 ```javascript
 let a
@@ -212,6 +213,11 @@ let a = 12
 let b = a ?? "Nothing found"
 console.log(b)
 // expected output: 12
+//won't work for 0, '', false, NaN
+let a = ''
+let b = a ?? "Nothing found"
+console.log(b)
+// expected output: ''
 ```
 #### 14. Short-circuit assignment:
 
