@@ -101,3 +101,33 @@ const unique = [...new Set(data)];
 console.log(unique);
 // expected output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "Ann", "Lori", false, undefined, null]
 ```
+#### 9. Count all occurances of object property value in array of objects:
+
+```javascript
+// from
+const array = [
+{type:'A', impact:'serious'},
+{type:'B', impact:'serious'},
+{type:'A', impact:'moderate'},
+{type:'M', impact:'serious'},
+{type:'A', impact:'low'},
+{type:'A', impact:'low'},
+{type:'A', impact:'critical'},
+{type:'N', impact:'serious'},
+{type:'A', impact:'critical'},
+{type:'D', impact:'critical'},
+{type:'D', impact:'high'}
+]
+
+//to
+{ serious: 4, moderate: 1, low: 2, critical: 3, high: 1 }
+
+// syntax: array.reduce(previousValue, currentValue) => { ... }, initialValue)
+const result = array.reduce((a, {impact}) => {
+  a[impact] = a[impact] || 0
+  a[impact]++
+  return a;
+}, {});
+
+console.log(result);
+// expected output: { serious: 4, moderate: 1, low: 2, critical: 3, high: 1 }
