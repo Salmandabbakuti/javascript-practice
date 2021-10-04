@@ -131,3 +131,11 @@ const result = array.reduce((a, {impact}) => {
 
 console.log(result);
 // expected output: { serious: 4, moderate: 1, low: 2, critical: 3, high: 1 }
+```
+#### 10. Generate Ids based on timestamp:
+
+```javascript
+const id = new Date().toISOString().replace(/[^0-9]/gi, '') // deletes every chracter except digits from iso time string. possible characters in ISO String ie "., -, T, Z, :"
+console.log(id);
+// expected output: "20211004092101782" //Id in YYYYMMDDHHMMSSsss format. useful for filenames, uids
+```
