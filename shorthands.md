@@ -267,3 +267,24 @@ const foo = 'Hey There!';
 const text = foo && 'Hi'; // if foo is truthy value, it will assign righthand value to 'text' variable. (see the difference b/w '??', '||', '&&')
 console.log(text)
 ```
+#### 16. Conditionally add properties to the object:
+
+```javascript
+const user = {userId: '1', name:'Kiran'};
+const isStudent = true;
+
+// longhand
+if(isStudent){
+  user.grade = 12;
+  user.school = 'abc school';
+}
+
+// shorthand
+const user = {
+  userId: '1',
+   name:'Kiran',
+   ...isStudent && {grade: 12, school: 'abc school'}
+}
+console.log(user)
+// expected output: { userId: "1", name: "Kiran", grade: 12, school: "abc school" }
+```
