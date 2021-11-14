@@ -1,10 +1,10 @@
 #### 1. Coverting Array to Object:
 
 ```javascript
-// from 
+// from
 ['firstName' ,'lastName','recordSource']
 
-// to 
+// to
 {firstname:'First Name', lastname:'Last Name', recordsource:'Record Source'}
 
 
@@ -37,7 +37,7 @@ console.log(dataObject);
   console.log(results);
 // expected: Array [22, 33, 71, "aa"]
 ```
-#### 3. Performance Test: 
+#### 3. Performance Test:
 
 ```javascript
 const doSomething = () => {
@@ -48,7 +48,7 @@ doSomething();
 const t1 = performance.now();
 console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
 ```
-#### 4. Emptying Array: 
+#### 4. Emptying Array:
 
 ```javascript
 const arr = ['a','b','c','d','e','f'];
@@ -81,7 +81,7 @@ console.log('final selected fields-->', selectedFields);
 ```javascript
 const data = [1, 0, false, "", 2, NaN, 0n, null, 3, undefined, 4]
 const filteredData = data.filter(Boolean)
-console.log(filteredData) 
+console.log(filteredData)
 //expected output: [1, 2, 3, 4]
 ```
 
@@ -119,13 +119,11 @@ const array = [
 {type:'D', impact:'high'}
 ]
 
-//to
-{ serious: 4, moderate: 1, low: 2, critical: 3, high: 1 }
+//to: { serious: 4, moderate: 1, low: 2, critical: 3, high: 1 }
 
 // syntax: array.reduce(previousValue, currentValue) => { ... }, initialValue)
 const result = array.reduce((a, {impact}) => {
-  a[impact] = a[impact] || 0
-  a[impact]++
+  a[impact] = a[impact] + 1 || 1
   return a;
 }, {});
 
