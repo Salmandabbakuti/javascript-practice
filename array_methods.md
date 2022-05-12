@@ -129,3 +129,44 @@ for (const [key, value] of Object.entries(records)) {
 // "1: 43"
 // "2: 44"
 ```
+
+#### Fill array with values(strings, numbers or even objects):
+
+```javascript
+const array = Array(5).fill(0);
+
+console.log(array);
+// expected output: [0, 0, 0, 0, 0]
+
+const array1 = Array(5).fill('a');
+console.log(array1);
+// expected output: ['a', 'a', 'a', 'a', 'a']
+
+
+// syntax: array.fill(value, start, end)
+// fills array from position 1-3 with b: 
+array1.fill('b', 1, 3);
+console.log(array1);
+// expected output: ['a', 'b', 'b', 'b', 'a']
+
+// fill array with objects:
+
+const data = Array.from({ length:5 }, () => ({value:2}));
+console.log(data);
+// expected output: [{value: 2}, {value: 2}, {value: 2}, {value: 2}, {value: 2}]
+
+// or with fill() and map() together:
+const data0 = Array(3).fill().map(item => ({ value: 2 }));
+console.log(data0);
+// expected output: [{value: 2}, {value: 2}, {value: 2}]
+
+// referenced type be aware
+const data1 = Array(5).fill({value:2});
+console.log(data1);
+// expected output: [{value: 2}, {value: 2}, {value: 2}, {value: 2}, {value: 2}]
+
+//changing one refernced value changes all others
+data1[0].value = 3;
+console.log(data1);
+// expected output: [{value: 3}, {value: 3}, {value: 3}, {value: 3}, {value: 3}]
+```
